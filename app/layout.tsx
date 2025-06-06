@@ -2,13 +2,7 @@ import type { Metadata } from 'next';
 import { Space_Mono, Albert_Sans } from 'next/font/google';
 import './globals.css';
 
-const geistSans = Albert_Sans({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
-
-const geistMono = Space_Mono({
+const spaceMono = Space_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -26,11 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${spaceMono.className} antialiased`}>{children}</body>
     </html>
   );
 }
